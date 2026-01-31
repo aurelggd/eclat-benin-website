@@ -716,6 +716,10 @@ textarea:focus-visible {
     justify-items: center;
   }
 
+  .center-on-mobile .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
   .center-on-mobile .value-card,
   .center-on-mobile .card,
   .center-on-mobile .partner-card,
