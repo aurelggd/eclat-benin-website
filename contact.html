@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Éclat Bénin | Contact</title>
+    <meta
+      name="description"
+      content="Contactez Éclat Bénin pour un partenariat, un don ou des informations sur nos actions."
+    />
+    <meta property="og:title" content="Éclat Bénin | Contact" />
+    <meta
+      property="og:description"
+      content="Écrivez-nous pour soutenir l’éducation et l’orientation des jeunes."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/logo.png" />
+    <link rel="icon" href="images/logo.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header>
+      <div class="container nav">
+        <a class="logo" href="index.html" aria-label="Éclat Bénin - Accueil">
+          <img src="images/logo.png" alt="Logo Éclat Bénin" />
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          data-nav-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-list" data-nav-menu id="primary-navigation">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="actions.html">Actions</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="nav-overlay" data-nav-overlay aria-hidden="true"></div>
+
+    <main id="contenu">
+      <section class="hero">
+        <div class="container hero-content">
+          <div>
+            <h1>Contactez-nous</h1>
+            <p>
+              Une question, un partenariat ou une proposition de soutien ? Nous sommes
+              à votre écoute pour bâtir ensemble des solutions éducatives durables.
+            </p>
+          </div>
+          <div class="about-highlight">
+            <h2 class="section-title">Coordonnées</h2>
+            <p class="section-subtitle">
+              Email : contact@eclatbenin.org<br />
+              Facebook : /eclatbenin<br />
+              LinkedIn : /company/eclat-benin
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="center-on-mobile">
+        <div class="container contact-wrapper">
+          <div class="contact-card">
+            <h2 class="section-title">Envoyez un message</h2>
+            <p class="section-subtitle">Nous répondrons dans les plus brefs délais.</p>
+            <form id="contact-form" novalidate>
+              <div>
+                <label for="name">Nom complet</label>
+                <input type="text" id="name" name="name" required />
+                <div class="error" data-error-for="name"></div>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+                <div class="error" data-error-for="email"></div>
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <div class="error" data-error-for="message"></div>
+              </div>
+              <button class="btn" type="submit">Envoyer le message</button>
+              <div class="form-message" id="form-message" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+          <div class="contact-card">
+            <h2 class="section-title">Pourquoi nous écrire ?</h2>
+            <ul>
+              <li>Proposer un partenariat éducatif</li>
+              <li>Faire un don ou parrainer un élève</li>
+              <li>Obtenir des informations sur nos actions</li>
+              <li>Rejoindre notre réseau de bénévoles</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-muted center-on-mobile">
+        <div class="container contact-wrapper">
+          <div class="contact-card">
+            <h2 class="section-title">Faire un don</h2>
+            <p class="section-subtitle">
+              Choisissez le canal qui vous convient. Nous vous recontactons pour confirmer.
+            </p>
+            <ul class="highlight-list">
+              <li>Mobile Money : MTN / Moov (numéro à confirmer)</li>
+              <li>Virement bancaire : IBAN / RIB (placeholder)</li>
+              <li>Don matériel : fournitures scolaires et équipements</li>
+            </ul>
+            <div class="cta-group">
+              <a class="btn btn-accent" href="#contact-form">Je fais un don</a>
+              <a class="btn btn-outline" href="#contact-form">Demander un reçu</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <h2 class="section-title">Transparence</h2>
+            <p>
+              Chaque don est tracé et utilisé pour financer les bourses, les ateliers
+              d’orientation et le mentorat. Des rapports d’impact sont partagés aux partenaires.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container hero-content">
+          <div>
+            <h2 class="section-title">Zone d’intervention</h2>
+            <p class="section-subtitle">
+              Nous intervenons principalement dans le nord du Bénin avec des actions ciblées
+              dans les zones rurales et urbaines.
+            </p>
+            <div class="zone-grid" role="list">
+              <span class="zone-badge" role="listitem">Atacora</span>
+              <span class="zone-badge" role="listitem">Donga</span>
+              <span class="zone-badge" role="listitem">Borgou</span>
+              <span class="zone-badge" role="listitem">Alibori</span>
+            </div>
+          </div>
+          <div class="about-highlight">
+            <h2 class="section-title">Localisation</h2>
+            <p>
+              Siège : Parakou (placeholder).<br />
+              Téléphone : +229 00 00 00 00 (placeholder).<br />
+              Email : contact@eclatbenin.org
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Éclat Bénin</h3>
+          <p>Association éducative et culturelle engagée pour l’excellence.</p>
+        </div>
+        <div>
+          <h3>Liens rapides</h3>
+          <p><a href="about.html">À propos</a></p>
+          <p><a href="actions.html">Actions</a></p>
+          <p><a href="contact.html">Contact</a></p>
+        </div>
+        <div>
+          <h3>Informations</h3>
+          <p><a href="mentions-legales.html">Mentions légales</a></p>
+          <p><a href="politique-confidentialite.html">Confidentialité</a></p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p>Email : contact@eclatbenin.org</p>
+          <p>Nord du Bénin</p>
+        </div>
+      </div>
+      <div class="container">
+        <small>© 2026 Éclat Bénin. Tous droits réservés.</small>
+      </div>
+    </footer>
+  </body>
+</html>
