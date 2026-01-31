@@ -160,7 +160,11 @@ body.nav-open .nav-overlay {
 
 .hero {
   padding: 80px 0;
-  background: linear-gradient(120deg, rgba(32, 76, 155, 0.12), rgba(233, 78, 31, 0.12));
+  background: linear-gradient(
+    120deg,
+    rgba(32, 76, 155, 0.12),
+    rgba(233, 78, 31, 0.12)
+  );
 }
 
 .hero-content {
@@ -170,12 +174,16 @@ body.nav-open .nav-overlay {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
-.hero h1 {
+.hero-title {
   color: var(--brand-primary);
   font-size: clamp(2rem, 4vw, 3rem);
   margin: 0;
+  line-height: 1.2;
 }
 
+.hero-title span {
+  display: inline;
+}
 
 .hero p {
   margin: 0;
@@ -603,6 +611,19 @@ textarea:focus-visible {
     text-align: center;
   }
 
+  .hero-title {
+    font-size: 1.85rem;
+    margin: 22px 0;
+  }
+
+  .hero-title span {
+    display: block;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
   .hero-description {
     margin-top: 22px;
     padding-top: 14px;
@@ -702,6 +723,22 @@ textarea:focus-visible {
   .center-on-mobile .team-card {
     width: 100%;
     max-width: 520px;
+  }
+
+  .center-on-mobile .card {
+    text-align: center;
+  }
+
+  .center-on-mobile .team-card {
+    text-align: center;
+  }
+
+  .center-on-mobile .contact-card {
+    text-align: center;
+  }
+
+  .center-on-mobile .card-icon {
+    margin: 0 auto 16px;
   }
 
   .footer-grid {
