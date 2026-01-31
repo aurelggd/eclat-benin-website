@@ -618,6 +618,26 @@ textarea:focus-visible {
 
   .hero-title span {
     display: block;
+    margin: 6px 0;
+    padding: 0;
+    background: linear-gradient(
+      transparent 62%,
+      rgba(32, 76, 155, 0.18) 62%
+    );
+  }
+
+  .hero-title span:first-child {
+    background: linear-gradient(
+      transparent 62%,
+      rgba(32, 76, 155, 0.22) 62%
+    );
+  }
+
+  .hero-title span:last-child {
+    background: linear-gradient(
+      transparent 62%,
+      rgba(233, 78, 31, 0.22) 62%
+    );
   }
 
   .hero-description {
