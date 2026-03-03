@@ -91,3 +91,13 @@ if (form) {
   });
 }
 
+/* Galerie : pause au maintien (doigt/souris), reprise au relâchement */
+document.querySelectorAll(".gallery-scroll-outer").forEach((el) => {
+  const resume = () => el.classList.remove("gallery-pressed");
+
+  el.addEventListener("pointerdown", () => el.classList.add("gallery-pressed"));
+  el.addEventListener("pointerup", resume);
+  el.addEventListener("pointerleave", resume);
+  el.addEventListener("pointercancel", resume);
+});
+
