@@ -580,41 +580,30 @@ section {
 
 /* Défilement infini (animation CSS) */
 .cards-scroll-outer {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   margin: 0 calc(-1 * var(--space-xs));
+  padding-bottom: var(--space-sm);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.cards-scroll-outer::-webkit-scrollbar {
+  display: none;
 }
 
 .cards-scroll-infinite {
+  display: flex;
   width: max-content;
-  animation: cards-scroll-infinite 35s linear infinite;
+  gap: var(--space-md);
 }
 
-.cards-scroll-outer:hover .cards-scroll-infinite {
-  animation-play-state: paused;
-}
-
-@keyframes cards-scroll-infinite {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .cards-scroll-infinite {
-    animation: none;
-  }
-  .cards-scroll-outer {
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  .cards-scroll-outer::-webkit-scrollbar {
-    display: none;
-  }
+.cards-scroll-outer .card {
+  flex: 0 0 min(280px, 85vw);
+  min-width: 260px;
+  scroll-snap-align: start;
 }
 
 
@@ -1207,10 +1196,20 @@ section {
   box-shadow: var(--shadow);
 }
 
-/* Galerie d’actions : défilement infini (animation CSS) */
+/* Galerie : défilement manuel horizontal */
 .gallery-scroll-outer {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   margin: 0 calc(-1 * var(--space-xs));
+  padding-bottom: var(--space-sm);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.gallery-scroll-outer::-webkit-scrollbar {
+  display: none;
 }
 
 .gallery-scroll-infinite {
@@ -1218,18 +1217,13 @@ section {
   width: max-content;
   gap: var(--space-md);
   padding-bottom: var(--space-sm);
-  animation: gallery-scroll-infinite 40s linear infinite;
-}
-
-.gallery-scroll-outer:hover .gallery-scroll-infinite,
-.gallery-scroll-outer.gallery-pressed .gallery-scroll-infinite {
-  animation-play-state: paused;
 }
 
 .gallery-item {
   position: relative;
   flex: 0 0 min(280px, 85vw);
   min-width: 220px;
+  scroll-snap-align: start;
 }
 
 .gallery-scroll-infinite .gallery-item img {
@@ -1255,34 +1249,10 @@ section {
   letter-spacing: 0.02em;
 }
 
-@keyframes gallery-scroll-infinite {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
 /* Masquer la description du hero sur mobile */
 @media (max-width: 768px) {
   .hero .hero-description-box,
   .hero .hero-description {
-    display: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .gallery-scroll-infinite {
-    animation: none;
-  }
-  .gallery-scroll-outer {
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  .gallery-scroll-outer::-webkit-scrollbar {
     display: none;
   }
 }
@@ -2165,7 +2135,7 @@ textarea {
     margin-right: auto;
   }
 
-  /* Défilement horizontal mobile : manuel (snap) ou automatique infini */
+  /* Défilement horizontal mobile : manuel avec snap */
   .mobile-scroll-outer {
     overflow-x: auto;
     overflow-y: hidden;
@@ -2175,13 +2145,6 @@ textarea {
     scroll-snap-type: x mandatory;
     margin: 0 calc(-1 * var(--space-sm));
     padding: 0 var(--space-sm) var(--space-sm);
-  }
-  .mobile-scroll-outer:has(> .mobile-scroll-infinite) {
-    overflow: hidden;
-    scroll-snap-type: none;
-  }
-  .mobile-scroll-outer:hover > .mobile-scroll-infinite {
-    animation-play-state: paused;
   }
   .mobile-scroll-outer::-webkit-scrollbar {
     display: none;
@@ -2200,7 +2163,6 @@ textarea {
   }
   .mobile-scroll-outer > .mobile-scroll-infinite {
     width: max-content;
-    animation: mobile-scroll-infinite 50s linear infinite;
   }
   .mobile-scroll-outer > .values-grid > *,
   .mobile-scroll-outer > .about-grid > *,
@@ -2211,15 +2173,6 @@ textarea {
     scroll-snap-align: start;
     flex: 0 0 min(320px, 85vw);
     min-width: 260px;
-  }
-
-  @keyframes mobile-scroll-infinite {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
   }
 
   /* Footer mobile : deux colonnes, logo agrandi, espace équilibré */
